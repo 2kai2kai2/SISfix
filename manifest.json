@@ -3,7 +3,7 @@
 	"short_name": "Sisyphus",
 	"description": "Replaces the CSS on SIS so it's slightly less ugly.",
 	"author": "Kai",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"icons": {
 		"128": "logo128.png"
 	},
