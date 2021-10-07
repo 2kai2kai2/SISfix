@@ -9,6 +9,7 @@
 	--sspfont: 'Source Sans Pro', sans-serif;
 	--rpired: #D6001C;
 	--rpigrey: #777676;
+	--rpinavy: #333366;
 	font-family: var(--sspfont) !important;
 	font-weight: 200;
 }
@@ -19,7 +20,7 @@ div.headerwrapperdiv {
 }
 div.headerwrapperdiv>div.pageheaderdiv1 {
 	background-image: url("https://rpi.edu/dept/cct/apps/web-branding/v1/header/meganav/img/RPIlogo_white.png");
-	background-position: 1em 1rem;
+	background-position: right 1em top 1em;
 	background-repeat: no-repeat;
 	background-origin: padding-box;
 	background-color: var(--rpired) !important;
@@ -33,7 +34,7 @@ div.pageheaderdiv1>h1 {
 	color: white;
 	font-family: var(--sspfont) !important;
 	font-size: 32px;
-	padding-top: 4em;
+	padding-top: 2em;
 }
 
 /* Navigation Links -- Ensure selector specificity to get styling order precedence*/
@@ -153,17 +154,48 @@ div.pagetitlediv {
 	border-bottom-color: black;
 	border-bottom-style: solid;
 	border-bottom-width: 1px;
+	padding-top: 2em;
+	background-image: url("https://rpi.edu/images/backgrounds/diamonds/diamonds-white.jpg");
+	background-repeat: repeat;
 }
 
 /* Page Body */
 div.pagebodydiv {
 	margin: 0 !important;
+	padding-bottom: 2em;
+
+	display: flex;
+	flex-direction: column;
 }
 /* ======================================================= */
 /* ==== menuplaintable ==== */
 table.menuplaintable {
 	border-top-style: none !important;
 	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+table.menuplaintable>tbody {
+	padding: 1em;
+
+	display: flex;
+	flex-direction: column;
+}
+table.menuplaintable>tbody>tr {
+	border-top-color: darkslategray;
+	border-top-style: solid;
+	border-top-width: 1px;
+
+	min-height: 2em;
+	display: flex;
+	align-items: center;
+	padding: 0.5em
+}
+table.menuplaintable>tbody>tr:last-child {
+	border-bottom-color: darkslategray;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
 }
 table.menuplaintable td.mpdefault:first-child, table.menuplaintable td.mpdefault> {
 	display: none !important;
@@ -173,8 +205,11 @@ table.menuplaintable img[name="Blue Ball"] {
 	display: none !important;
 }
 /* Links */
+table.menuplaintable td.mpdefault {
+	display: unset;
+}
 table.menuplaintable td.mpdefault a, table.menuplaintable td.mpdefault a * {
-	color: #ab2328;
+	color: black;
 	font-size: small;
 }
 table.menuplaintable td.mpdefault a:visited, table.menuplaintable td.mpdefault a *:visited {
@@ -190,7 +225,147 @@ table.menuplaintable td.mpdefault>span.menulinkdesctext {
 	margin-left: 10px;
 }
 /* ==== datadisplaytable ==== */
+table.datadisplaytable {
+	margin-left: 1em;
+	margin-right: 1em;
+	border-collapse: collapse;
+	padding: 4px;
+}
+table.datadisplaytable caption {
+	font-size: large;
+	font-style: normal;
+	text-align: center;
+	
+	background-color: var(--rpigrey);
+	border-top-left-radius: 1em;
+	border-top-right-radius: 1em;
+	color: white;
 
+}
+table.datadisplaytable>tbody {
+	border-style: ridge;
+	border-color: var(--rpigrey);
+	border-bottom-left-radius: 1em;
+	border-bottom-right-radius: 1em;
+}
+table.datadisplaytable tr {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: var(--rpigrey);
+}
+table.datadisplaytable th.ddlabel { /* Data Labels */
+	padding: 4px;
+}
+/* Drop down forms */
+div.pagebodydiv form table.dataentrytable {
+	display: inline-block;
+}
+div.pagebodydiv form table.dataentrytable select, div.pagebodydiv form table.dataentrytable input[type=submit]{
+	vertical-align: baseline;
+	display: inline-block;
+	height: 100%;
+}
+div.pagebodydiv form table.dataentrytable>tbody>tr>td.dedefault>select {
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1em;
+	padding: 1px;
+
+	text-align: center;
+	vertical-align: middle;
+}
+div.pagebodydiv form input[type=submit] {
+	margin: 0;
+	border-left: 0;
+
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1em;
+}
+/* ==== Site Map ==== */
+/* Show/Hide Details */
+div.pagebodydiv>form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] {
+	text-align: center;
+	border-bottom-color: black;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+div.pagebodydiv>form>input[value="Show Details"], div.pagebodydiv>form>input[value="Hide Details"] {
+	border: none;
+	border-radius: 1em;
+	background-color: transparent;
+
+	color: var(--rpired);
+	
+}
+div.pagebodydiv>form>input[value="Show Details"]:hover, div.pagebodydiv>form>input[value="Hide Details"]:hover {
+	border: none;
+	background-color: lightgray;
+	color: var(--rpired);
+}
+/* Columns */
+div.pagebodydiv>table.plaintable:first-of-type {
+	table-layout: fixed;
+	width: 100%;
+}
+div.pagebodydiv>table.plaintable:first-of-type>tbody>tr>td {
+	border-color: black;
+	border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	padding: 0.5em;
+}
+/* Within Columns */
+div.pagebodydiv>table.plaintable table.plaintable {
+	width: 100%;
+}
+div.pagebodydiv>table.plaintable table.plaintable td.pldefault {
+	font-size: 0;
+}
+td.pldefault>a.sitemaplevel1, td.pldefault>a.sitemaplevel1:hover, td.pldefault>a.sitemaplevel1:visited {
+	color: black;
+	font-weight: bold !important;
+	font-size: large !important;
+	text-align: center;
+
+	border-bottom-color: black;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	visibility: visible;
+}
+div.pagebodydiv>table.plaintable:first-of-type table.plaintable a {
+	font-size: x-small;
+	visibility: visible;
+	color: black;
+}
+div.pagebodydiv>table.plaintable:first-of-type table.plaintable a:hover {
+	color: black;
+	font-weight: unset;
+}
+div.pagebodydiv>table.plaintable:first-of-type table.plaintable a:visited {
+	color: black;
+	font-weight: unset;
+}
+div.pagebodydiv>table.plaintable:first-of-type table.plaintable a>b {
+	margin-top: 0.5em;
+	font-size: small;
+	visibility: visible;
+	color: black;
+	border-top-color: black;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-bottom-color: black;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+div.pagebodydiv>table.plaintable:first-of-type table.plaintable a>b:hover {
+	color: black;
+}
+div.pagebodydiv>table.plaintable:first-of-type table.plaintable a>b:visited {
+	color: black;
+}
 /* ======================================================= */
 /* ==== PAGE FOOTER ==== */
 div.footerbeforediv~div {
