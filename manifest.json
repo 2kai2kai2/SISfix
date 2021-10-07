@@ -1,7 +1,7 @@
 {
 	"name": "RPI Web Improvements",
 	"short_name": "Sisyphus",
-	"description": "Replaces the CSS on SIS so it's slightly less ugly.",
+	"description": "Make SIS a little less ugly.",
 	"author": "Kai",
 	"version": "0.0.2",
 	"icons": {
