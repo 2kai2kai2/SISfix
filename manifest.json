@@ -5,11 +5,11 @@
 	"author": "Kai",
 	"version": "0.1.0",
 	"icons": {
-		"128": "webstore_assets/logos/logo128.png"
+		"128": "logo128.png"
 	},
 	"content_scripts": [
 		{
-			"css": ["app.css"],
+			"css": ["defines.css", "app.css", "header.css", "footer.css", "weekly_schedule.css"],
 			"matches": ["https://sis.rpi.edu/*"]
 		}
 	],

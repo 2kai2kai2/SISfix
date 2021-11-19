@@ -1,0 +1,6 @@
+/* datadisplaytable -- Weekly Student Schedule: make the meeting times table connect to the main part of the class table*/
+table.datadisplaytable[summary="This table lists the scheduled meeting times and assigned instructors for this class.."]>caption {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	margin-top: 0;
+}

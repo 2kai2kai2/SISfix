@@ -1,152 +1,28 @@
+@import "defines.css";
+
 @font-face {
 	font-family: "Source Sans Pro";
 	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 	font-weight: 200;
 }
+
 :root {
-	--rpifontsans: 'Trade Gothic', Arial, sans-serif;
-	--rpifontserif: 'Janson Text', Georgia, serif;
-	--sspfont: 'Source Sans Pro', sans-serif;
-	--rpired: #D6001C;
-	--rpigrey: #777676;
-	--rpinavy: #333366;
 	font-family: var(--sspfont) !important;
 	font-weight: 200;
+	width: 100%;
 }
 
-/* This is the "Rensselaer Self-Service Information System" header */
-div.headerwrapperdiv {
-	background: none;
+body {
+	width: 100%;
+	overflow-x: hidden;
 }
-div.headerwrapperdiv>div.pageheaderdiv1 {
-	background-image: url("https://rpi.edu/dept/cct/apps/web-branding/v1/header/meganav/img/RPIlogo_white.png");
-	background-position: right 1em top 1em;
-	background-repeat: no-repeat;
-	background-origin: padding-box;
-	background-color: var(--rpired) !important;
-	margin: 0;
-}
-div.headerwrapperdiv>div.headerlinksdiv {
-	margin-top: 0;
-	padding-top: 2em;
-}
-div.pageheaderdiv1>h1 {
-	color: white;
-	font-family: var(--sspfont) !important;
-	font-size: 32px;
-	padding-top: 2em;
+body>div {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
 }
 
-/* Navigation Links -- Ensure selector specificity to get styling order precedence*/
-div.headerlinksdiv {
-	margin: 0 !important;
-	padding: 0 !important;
-	background-color: white;
-	padding-bottom: 0;
-}
-div.headerlinksdiv>span.pageheaderlinks2 table {
-	margin: 0 !important;
-	display: inline;
-}
-div.headerlinksdiv>span.pageheaderlinks2 table table>tbody>tr {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	min-width: 100vw;
-}
-div.headerlinksdiv p {
-	display: none;
-}
-tr>td.tabon, tr>td.taboff{
-	background-color: white;
-	color: #767676 !important;
-	background: none !important;
-	padding: 0 !important;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-tr>td.tabon:hover, tr>td.taboff:hover {
-	background-color: var(--rpired) !important;
-	color: white !important;
-}
-tr>td.tabon>a, tr>td.taboff>a {
-	color: unset !important; /*Inheret the parent's color, allowing for change on hover*/
-	font-family: var(--sspfont) !important;
-	font-weight: 200 !important;
-	padding-left: 8px;
-	padding-right: 8px;
-	margin-left: 1px;
-	margin-right: 1px;
-	text-transform: uppercase;
-	text-align: center !important;
-}
-td.bgtabon, td.bgtaboff {
-	display: none;
-}
-
-/* Search Bar */
-div.headerwrapperdiv>table.plaintable>tbody>tr {
-	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-}
-div.headerwrapperdiv>table {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	background-color: #B6B6B6;
-}
-div.headerlinksdiv2>form {
-	background-color: white;
-	font-size: 0;
-	border-radius: 4px;
-	border-width: 1px;
-	border-style: solid;
-	padding: 2px;
-	float: left;
-}
-div.headerlinksdiv2>form input {
-	font-size: small;
-}
-input#keyword_in_id {
-	border-style: none;
-}
-div.headerlinksdiv2>form>input[type=submit] {
-	background-color: lightgray;
-	text-align: center;
-	display: inline-block;
-	text-decoration: none;
-	border-radius: 2px;
-	border-style: none !important;
-}
-
-/* Page Header Links */
-p.rightaligntext {
-	display: inline-block;
-	height: 100%;
-}
-span.pageheaderlinks {
-	display: inline;
-	float: right;
-	vertical-align: middle;
-
-	font-family: var(--rpifontsans);
-	user-select: none;	
-}
-span.pageheaderlinks>a.submenulinktext2 {
-	background-color: transparent;
-	padding: 5px;
-	user-select: text;
-	color: white !important;
-	vertical-align: middle;
-}
-span.pageheaderlinks>a.submenulinktext2:visited {
-	color: unset !important;
-}
-span.pageheaderlinks>a.submenulinktext2:hover {
-	color: unset !important;
-}
+/* =================================================================================== */
 
 /* Page Title */
 div.pagetitlediv {
@@ -167,7 +43,9 @@ div.pagebodydiv {
 	display: flex;
 	flex-direction: column;
 }
+
 /* ======================================================= */
+
 /* ==== menuplaintable ==== */
 table.menuplaintable {
 	border-top-style: none !important;
@@ -224,6 +102,7 @@ table.menuplaintable td.mpdefault>span.menulinkdesctext {
 	font-size: smaller;
 	margin-left: 10px;
 }
+
 /* ==== datadisplaytable ==== */
 table.datadisplaytable {
 	margin-left: 1em;
@@ -256,9 +135,11 @@ table.datadisplaytable tr {
 table.datadisplaytable th.ddlabel { /* Data Labels */
 	padding: 4px;
 }
+
 /* Drop down forms */
 div.pagebodydiv form table.dataentrytable {
 	display: inline-block;
+	width: 100%;
 }
 div.pagebodydiv form table.dataentrytable select, div.pagebodydiv form table.dataentrytable input[type=submit]{
 	vertical-align: baseline;
@@ -365,72 +246,4 @@ div.pagebodydiv>table.plaintable:first-of-type table.plaintable a>b:hover {
 }
 div.pagebodydiv>table.plaintable:first-of-type table.plaintable a>b:visited {
 	color: black;
-}
-/* ======================================================= */
-/* ==== PAGE FOOTER ==== */
-div.footerbeforediv~div {
-	background-color: var(--rpigrey);
-	margin: 0;
-}
-div.footerbeforediv~div * {
-	margin: 0;
-}
-/* footerlinksdiv */
-/* The links menu at the bottom */
-div.footerlinksdiv {
-	padding-top: 2em;
-}
-span.pagefooterlinks>map>p:last-child {
-	color: white;
-	visibility: collapse;
-
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: space-around;
-}
-span.pagefooterlinks>map>p:last-child a {
-	visibility: visible;
-	padding-left: 1em;
-	padding-right: 1em;
-
-	font-size: small;
-	font-family: var(--sspfont);
-	color: white;
-}
-span.pagefooterlinks>map>p:last-child a:hover {
-	color: white;
-}
-span.pagefooterlinks>map>p:last-child a:visited {
-	color: white;
-}
-
-/* All that stuff at the bottom */
-body>div.pagefooterdiv { /* parent to span.releasetext */
-	margin-left: 0;
-	margin-right: 0;
-	padding-top: 1em;
-	float: none;
-	right: 0;
-	left: 0;
-}
-span.releasetext { /* Has the "RELEASE: X.X.X.X" thing */
-	color: white;
-	font-size: smaller;
-	font-weight: 100;
-	text-align: center;
-	display: block;
-	text-transform: capitalize;
-}
-body>div.banner_copyright {
-	left: 0;
-	right: 0;
-}
-div.banner_copyright>h5 {
-	color: white;
-	font-size: small;
-	font-weight: 100;
-	text-align: center;
-	margin: 0;
-	padding-bottom: 1em;
 }
