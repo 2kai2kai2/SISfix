@@ -3,13 +3,13 @@
 	"short_name": "Sisyphus",
 	"description": "Make SIS a little less ugly.",
 	"author": "Kai",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"icons": {
 		"128": "logo128.png"
 	},
 	"content_scripts": [
 		{
-			"css": ["defines.css", "app.css", "header.css", "footer.css", "weekly_schedule.css"],
+			"css": ["defines.css", "app.css", "header.css", "footer.css", "info.css", "weekly_schedule.css", "site_map.css"],
 			"matches": ["https://sis.rpi.edu/*"]
 		}
 	],

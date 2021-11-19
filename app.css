@@ -1,11 +1,5 @@
 @import "defines.css";
 
-@font-face {
-	font-family: "Source Sans Pro";
-	src: url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
-	font-weight: 200;
-}
-
 :root {
 	font-family: var(--sspfont) !important;
 	font-weight: 200;
@@ -35,6 +29,7 @@ div.pagetitlediv {
 	background-repeat: repeat;
 }
 
+
 /* Page Body */
 div.pagebodydiv {
 	margin: 0 !important;
@@ -42,6 +37,27 @@ div.pagebodydiv {
 
 	display: flex;
 	flex-direction: column;
+}
+
+/* Page tabs */
+/* Inherits table behavior from `div.plaintable` below */
+/* Inherits mouseover/color/font from header.css for navigation links (same as in header) */
+div.pagebodydiv>table.plaintable[summary="This is main table for displaying Tab Items."] td.pldefault {
+	padding: 0;
+	border-top-width: 0;
+	border-bottom-color: lightslategray;
+	border-left-width: 0;
+	border-right-width: 0;
+	
+}
+div.pagebodydiv>table.plaintable[summary="This is main table for displaying Tab Items."] td.pldefault tr {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+div.pagebodydiv > table.plaintable[summary="This is main table for displaying Tab Items."] table.plaintable td>a {
+	font-size: small;
 }
 
 /* ======================================================= */
@@ -165,27 +181,10 @@ div.pagebodydiv form input[type=submit] {
 	border-width: 1px;
 	border-radius: 1em;
 }
-/* ==== Site Map ==== */
-/* Show/Hide Details */
-div.pagebodydiv>form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] {
-	text-align: center;
-	border-bottom-color: black;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
-}
-div.pagebodydiv>form>input[value="Show Details"], div.pagebodydiv>form>input[value="Hide Details"] {
-	border: none;
-	border-radius: 1em;
-	background-color: transparent;
 
-	color: var(--rpired);
-	
-}
-div.pagebodydiv>form>input[value="Show Details"]:hover, div.pagebodydiv>form>input[value="Hide Details"]:hover {
-	border: none;
-	background-color: lightgray;
-	color: var(--rpired);
-}
+/* ==== plaintable ==== */
+/* In-page tab items and site map contents */
+
 /* Columns */
 div.pagebodydiv>table.plaintable:first-of-type {
 	table-layout: fixed;
@@ -204,17 +203,6 @@ div.pagebodydiv>table.plaintable table.plaintable {
 }
 div.pagebodydiv>table.plaintable table.plaintable td.pldefault {
 	font-size: 0;
-}
-td.pldefault>a.sitemaplevel1, td.pldefault>a.sitemaplevel1:hover, td.pldefault>a.sitemaplevel1:visited {
-	color: black;
-	font-weight: bold !important;
-	font-size: large !important;
-	text-align: center;
-
-	border-bottom-color: black;
-	border-bottom-width: 2px;
-	border-bottom-style: solid;
-	visibility: visible;
 }
 div.pagebodydiv>table.plaintable:first-of-type table.plaintable a {
 	font-size: x-small;
