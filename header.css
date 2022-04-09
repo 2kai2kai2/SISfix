@@ -12,10 +12,14 @@ inconsistent changes have been made to certain pages over the years).
 
 /* =================================================================================== */
 /* This is the top header.
-It may be labelled any of the following, depending on the page:
+
+BEFORE changes, it may be labelled any of the following, depending on the page:
 "Rensselaer Self-Service Information System"
 "Rensselaer's Student Information System"
 "Rensselaer Student Information System"
+
+However, we have made it consistently "Rensselaer Student Information System"
+Note that this makes the text unselectable
 */
 div.headerwrapperdiv {
 	background: none;
@@ -35,8 +39,14 @@ div.headerwrapperdiv>div.headerlinksdiv {
 div.pageheaderdiv1>h1 {
 	color: white;
 	font-family: var(--sspfont) !important;
+	font-size: 0;
+	padding-top: 64px;
+	margin: 8px;
+	user-select: none;
+}
+div.pageheaderdiv1>h1::before {
+	content: "Rensselaer Student Information System";
 	font-size: 32px;
-	padding-top: 2em;
 }
 
 /* =================================================================================== */

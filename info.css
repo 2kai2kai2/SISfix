@@ -9,3 +9,15 @@ img[src="/gengifs/hwgginfo.gif"] {
     overflow: clip;
     box-sizing: border-box;
 }
+
+img[src="/wtlgifs/web_info_cascade.png"] {
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png);
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    width: 1.2em;
+    height: 1.2em;
+    padding-left: 1.2em;
+    padding-top: 1.2em;
+    overflow: clip;
+    box-sizing: border-box;
+}

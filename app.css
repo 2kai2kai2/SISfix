@@ -48,12 +48,11 @@ div.pagebodydiv>table.plaintable[summary="This is main table for displaying Tab 
 	border-bottom-color: lightslategray;
 	border-left-width: 0;
 	border-right-width: 0;
-	
 }
 div.pagebodydiv>table.plaintable[summary="This is main table for displaying Tab Items."] td.pldefault tr {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 div.pagebodydiv > table.plaintable[summary="This is main table for displaying Tab Items."] table.plaintable td>a {
@@ -135,7 +134,6 @@ table.datadisplaytable caption {
 	border-top-left-radius: 1em;
 	border-top-right-radius: 1em;
 	color: white;
-
 }
 table.datadisplaytable>tbody {
 	border-style: ridge;
@@ -157,7 +155,7 @@ div.pagebodydiv form table.dataentrytable {
 	display: inline-block;
 	width: 100%;
 }
-div.pagebodydiv form table.dataentrytable select, div.pagebodydiv form table.dataentrytable input[type=submit]{
+div.pagebodydiv form table.dataentrytable select, div.pagebodydiv form table.dataentrytable input[type=submit] {
 	vertical-align: baseline;
 	display: inline-block;
 	height: 100%;
@@ -172,7 +170,7 @@ div.pagebodydiv form table.dataentrytable>tbody>tr>td.dedefault>select {
 	text-align: center;
 	vertical-align: middle;
 }
-div.pagebodydiv form input[type=submit] {
+div.pagebodydiv form input[type=submit], div.pagebodydiv form input[type=reset] {
 	margin: 0;
 	border-left: 0;
 

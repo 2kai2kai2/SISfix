@@ -1,0 +1,44 @@
+@import "defines.css";
+
+/* Link formatting */
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr>td:nth-child(2)>a {
+    color: var(--rpired);
+}
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr>td:nth-child(2)>a:hover {
+    color: var(--rpired);
+}
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr>td:nth-child(2)>a:visited {
+    color: var(--rpired);
+}
+
+/* Add contact */
+/*
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr:last-of-type>td:nth-child(1) {
+    visibility: hidden;
+}
+*/
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr:last-of-type>td:nth-child(2)>a {
+    /* Bubble around "New Contact" */
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--rpired);
+
+    border-radius: 0.5em;
+    background-color: var(--rpired);
+    padding-left: 0.5em;
+    padding-right: 1em;
+    /*background-image: url("page_assets/plus_icon.gif");*/
+    
+    /* "New Contact" text */
+    color: white;
+}
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr:last-of-type>td:nth-child(2)>a:hover {
+    color: var(--rpired);
+    background-color: white;
+    text-decoration-line: unset;
+}
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr:last-of-type>td:nth-child(2)>a::before {
+    content: "+";
+    font-weight: 900;
+    padding: 1px;
+}
