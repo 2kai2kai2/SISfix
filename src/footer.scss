@@ -1,0 +1,85 @@
+@import "defines.scss";
+
+/*
+This file contains all the CSS for the footer,
+starting at `body>div.footerbeforediv` to the end.
+This is usually just copyright and release info, but
+can also include footer links specific to the page.
+*/
+
+/* ======================================================= */
+
+div.footerbeforediv~div {
+    background-color: $rpigrey;
+
+    &,
+    * {
+        margin: 0;
+    }
+}
+
+/* ======================================================= */
+
+/* footerlinksdiv */
+/* The links menu at the bottom (optional) */
+div.footerlinksdiv {
+    padding-top: 2em;
+}
+
+span.pagefooterlinks>map>p:last-child {
+    color: white;
+    visibility: collapse;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+
+    a {
+        visibility: visible;
+        padding-left: 1em;
+        padding-right: 1em;
+
+        font-size: small;
+        font-family: $sspfont;
+        @include colorHV(white);
+        color: white;
+    }
+}
+
+/* ======================================================= */
+
+/* Info about the company that made SIS back in 2002 */
+body>div.pagefooterdiv {
+    /* parent to span.releasetext */
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 1em;
+    float: none;
+    right: 0;
+    left: 0;
+}
+
+span.releasetext {
+    /* Has the "RELEASE: X.X.X.X" thing */
+    color: white;
+    font-size: smaller;
+    font-weight: 100;
+    text-align: center;
+    display: block;
+    text-transform: capitalize;
+}
+
+body>div.banner_copyright {
+    left: 0;
+    right: 0;
+
+    &>h5 {
+        color: white;
+        font-size: small;
+        font-weight: 100;
+        text-align: center;
+        margin: 0;
+        padding-bottom: 1em;
+    }
+}

@@ -1,0 +1,256 @@
+@import "defines.scss";
+
+:root {
+    font-family: $sspfont !important;
+    font-weight: 200;
+    width: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+
+    &>div {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* =================================================================================== */
+
+/* Page Title */
+div.pagetitlediv {
+    text-align: center;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding-top: 2em;
+    background-image: url("https://rpi.edu/images/backgrounds/diamonds/diamonds-white.jpg");
+    background-repeat: repeat;
+}
+
+/* Page Body */
+div.pagebodydiv {
+    margin: 0 !important;
+    padding-bottom: 2em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* Page tabs */
+/* Inherits table behavior from `div.plaintable` below */
+/* Inherits mouseover/color/font from header.css for navigation links (same as in header) */
+div.pagebodydiv>table.plaintable[summary="This is main table for displaying Tab Items."] {
+    td.pldefault {
+        padding: 0;
+        border-top-width: 0;
+        border-bottom-color: lightslategray;
+        border-left-width: 0;
+        border-right-width: 0;
+    }
+
+    td.pldefault tr {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    table.plaintable td>a {
+        font-size: small;
+    }
+}
+
+/* ======================================================= */
+
+/* ==== menuplaintable ==== */
+table.menuplaintable {
+    border-top-style: none !important;
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    &>tbody {
+        padding: 1em;
+
+        display: flex;
+        flex-direction: column;
+    }
+
+    &>tbody>tr {
+        border-top-color: darkslategray;
+        border-top-style: solid;
+        border-top-width: 1px;
+
+        min-height: 2em;
+        display: flex;
+        align-items: center;
+        padding: 0.5em
+    }
+
+    &>tbody>tr:last-child {
+        border-bottom-color: darkslategray;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+    }
+
+    td.mpdefault:first-child,
+    td.mpdefault> {
+        display: none !important;
+    }
+
+    img[name="Blue Ball"] {
+        display: none !important;
+    }
+
+    /* Links */
+    td.mpdefault {
+        display: unset;
+    }
+
+    td.mpdefault a,
+    td.mpdefault a * {
+        @include colorHV(black);
+        font-size: small;
+    }
+
+    td.mpdefault a:hover,
+    td.mpdefault a *:hover {
+        text-decoration: underline;
+    }
+
+    /* Descriptions */
+    td.mpdefault>span.menulinkdesctext {
+        font-size: smaller;
+        margin-left: 10px;
+    }
+}
+
+/* ==== datadisplaytable ==== */
+table.datadisplaytable {
+    margin-left: 1em;
+    margin-right: 1em;
+    border-collapse: collapse;
+    padding: 4px;
+
+
+    caption {
+        font-size: large;
+        font-style: normal;
+        text-align: center;
+
+        background-color: $rpigrey;
+        border-top-left-radius: 1em;
+        border-top-right-radius: 1em;
+        color: white;
+    }
+
+    &>tbody {
+        border-style: ridge;
+        border-color: $rpigrey;
+        border-bottom-left-radius: 1em;
+        border-bottom-right-radius: 1em;
+    }
+
+    tr {
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: $rpigrey;
+    }
+
+    th.ddlabel {
+        /* Data Labels */
+        padding: 4px;
+    }
+}
+
+/* Drop down forms */
+div.pagebodydiv form {
+    table.dataentrytable {
+        display: inline-block;
+        width: 100%;
+
+        select,
+        input[type=submit] {
+            vertical-align: baseline;
+            display: inline-block;
+            height: 100%;
+        }
+
+        &>tbody>tr>td.dedefault>select {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            border-radius: 1em;
+            padding: 1px;
+
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+
+    input[type=submit],
+    input[type=reset] {
+        margin: 0;
+        border-left: 0;
+
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 1em;
+    }
+}
+
+/* ==== plaintable ==== */
+/* In-page tab items and site map contents */
+div.pagebodydiv>table.plaintable {
+
+    /* Columns */
+    &:first-of-type {
+        table-layout: fixed;
+        width: 100%;
+
+        &>tbody>tr>td {
+            border-color: black;
+            border-width: 1px;
+            border-style: solid;
+            border-collapse: collapse;
+            padding: 0.5em;
+        }
+    }
+
+    /* Within Columns */
+    table.plaintable {
+        width: 100%;
+
+        td.pldefault {
+            font-size: 0;
+        }
+    }
+
+    &:first-of-type table.plaintable a {
+        font-size: x-small;
+        visibility: visible;
+        color: black;
+
+        @include colorHV(black);
+        @include unsetHVBoldness;
+
+        &>b {
+            margin-top: 0.5em;
+            font-size: small;
+            visibility: visible;
+            @include colorHV(black);
+            color: black;
+            border-top-color: black;
+            border-top-width: 1px;
+            border-top-style: solid;
+            border-bottom-color: black;
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+        }
+    }
+}

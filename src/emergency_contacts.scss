@@ -1,0 +1,40 @@
+@import "defines.scss";
+
+/* Link formatting */
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr>td:nth-child(2)>a {
+    @include colorHV($rpired);
+}
+
+/* Add contact */
+/*
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr:last-of-type>td:nth-child(1) {
+    visibility: hidden;
+}
+*/
+table.datadisplaytable[summary="This table shows emergency contacts."]>tbody>tr:last-of-type>td:nth-child(2)>a {
+    /* Bubble around "New Contact" */
+    border-style: solid;
+    border-width: 1px;
+    border-color: $rpired;
+
+    border-radius: 0.5em;
+    background-color: $rpired;
+    padding-left: 0.5em;
+    padding-right: 1em;
+    /*background-image: url("page_assets/plus_icon.gif");*/
+
+    /* "New Contact" text */
+    color: white;
+
+    &:hover {
+        color: $rpired;
+        background-color: white;
+        text-decoration-line: unset;
+    }
+
+    &::before {
+        content: "+";
+        font-weight: 900;
+        padding: 1px;
+    }
+}

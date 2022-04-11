@@ -1,0 +1,36 @@
+@import "defines.scss";
+
+/* Show/Hide Details */
+div.pagebodydiv>form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] {
+    text-align: center;
+    border-bottom-color: black;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+
+    &>input[value="Show Details"],
+    &>input[value="Hide Details"] {
+        border: none;
+        border-radius: 1em;
+        background-color: transparent;
+
+        @include colorHV($rpired);
+
+        &:hover {
+            border: none;
+            background-color: lightgray;
+        }
+    }
+}
+
+/* Links */
+td.pldefault>a.sitemaplevel1 {
+    @include colorHV(black);
+    font-weight: bold !important;
+    font-size: large !important;
+    text-align: center;
+
+    border-bottom-color: black;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    visibility: visible;
+}
