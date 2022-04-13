@@ -1,4 +1,4 @@
-@import "defines.scss";
+@import "defines.css";
 
 /*
 This file contains all the CSS for elements contained in
@@ -22,142 +22,159 @@ However, we have made it consistently "Rensselaer Student Information System"
 Note that this makes the text unselectable
 */
 div.headerwrapperdiv {
-	background: none;
-}
-div.headerwrapperdiv>div.pageheaderdiv1 {
-	background-image: url("https://rpi.edu/dept/cct/apps/web-branding/v1/header/meganav/img/RPIlogo_white.png"); /*"https://sis.rpi.edu/gengifs/smllman.gif"*/
-	background-position: right 1em top 1em;
-	background-repeat: no-repeat;
-	background-origin: padding-box;
-	background-color: $rpired !important;
-	margin: 0;
-}
-div.headerwrapperdiv>div.headerlinksdiv {
-	margin-top: 0;
-	padding-top: 2em;
-}
-div.pageheaderdiv1>h1 {
-	color: white;
-	font-family: $sspfont !important;
-	font-size: 0;
-	padding-top: 64px;
-	margin: 8px;
-	user-select: none;
-}
-div.pageheaderdiv1>h1::before {
-	content: "Rensselaer Student Information System";
-	font-size: 32px;
+    background: none;
+
+	/* Top banner with title, set to red with white logo. */
+    &>div.pageheaderdiv1 {
+        background-image: url("https://rpi.edu/dept/cct/apps/web-branding/v1/header/meganav/img/RPIlogo_white.png");
+        /*"https://sis.rpi.edu/gengifs/smllman.gif"*/
+        background-position: right 1em top 1em;
+        background-repeat: no-repeat;
+        background-origin: padding-box;
+        background-color: var(--rpired) !important;
+        margin: 0;
+
+		/* "Rensselaer Student Information System" text */
+        &>h1 {
+            color: white;
+            font-family: var(--sspfont) !important;
+            font-size: 0;
+            padding-top: 64px;
+            margin: 8px;
+
+            &::before {
+                content: "Rensselaer Student Information System";
+                font-size: 32px;
+            }
+        }
+    }
 }
 
 /* =================================================================================== */
 /* Navigation Links -- Ensure selector specificity to get styling order precedence */
 div.headerlinksdiv {
-	margin: 0 !important;
-	padding: 0 !important;
-	background-color: white;
-	padding-bottom: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: white;
+    padding-bottom: 0;
+
+    &>span.pageheaderlinks2 table {
+        margin: 0 !important;
+        display: inline;
+
+        table>tbody>tr {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-width: 100vw;
+        }
+    }
+
+    p {
+        display: none;
+    }
 }
-div.headerlinksdiv>span.pageheaderlinks2 table {
-	margin: 0 !important;
-	display: inline;
+
+tr>td.tabon,
+tr>td.taboff {
+    background-color: white;
+    color: #767676 !important;
+    background: none !important;
+    padding: 0 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: var(--rpired) !important;
+        color: white !important;
+    }
+
+    &>a {
+        color: unset !important;
+        /*Inherit the parent's color, allowing for change on hover*/
+        font-family: var(--sspfont) !important;
+        font-weight: 200 !important;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-left: 1px;
+        margin-right: 1px;
+        text-transform: uppercase;
+        text-align: center !important;
+    }
 }
-div.headerlinksdiv>span.pageheaderlinks2 table table>tbody>tr {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	min-width: 100vw;
-}
-div.headerlinksdiv p {
-	display: none;
-}
-tr>td.tabon, tr>td.taboff{
-	background-color: white;
-	color: #767676 !important;
-	background: none !important;
-	padding: 0 !important;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-tr>td.tabon:hover, tr>td.taboff:hover {
-	background-color: $rpired !important;
-	color: white !important;
-}
-tr>td.tabon>a, tr>td.taboff>a {
-	color: unset !important; /*Inherit the parent's color, allowing for change on hover*/
-	font-family: $sspfont !important;
-	font-weight: 200 !important;
-	padding-left: 8px;
-	padding-right: 8px;
-	margin-left: 1px;
-	margin-right: 1px;
-	text-transform: uppercase;
-	text-align: center !important;
-}
-td.bgtabon, td.bgtaboff {
-	display: none;
+
+td.bgtabon,
+td.bgtaboff {
+    display: none;
 }
 
 /* =================================================================================== */
 /* Search Bar */
-div.headerwrapperdiv>table.plaintable>tbody>tr {
-	display: flex;
-	justify-content: space-between;
-	align-items: stretch;
-}
 div.headerwrapperdiv>table {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	background-color: #B6B6B6;
+    &.plaintable>tbody>tr {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
+
+    padding-top: 2px;
+    padding-bottom: 2px;
+    background-color: #B6B6B6;
 }
+
 div.headerlinksdiv2>form {
-	background-color: white;
-	font-size: 0;
-	border-radius: 4px;
-	border-width: 1px;
-	border-style: solid;
-	padding: 2px;
-	float: left;
-}
-div.headerlinksdiv2>form input {
-	font-size: small;
-}
-input#keyword_in_id {
-	border-style: none;
-}
-div.headerlinksdiv2>form>input[type=submit] {
-	background-color: lightgray;
-	text-align: center;
-	display: inline-block;
-	text-decoration: none;
-	border-radius: 2px;
-	border-style: none !important;
+    background-color: white;
+    font-size: 0;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2px;
+    float: left;
+
+    input {
+        font-size: small;
+
+        &#keyword_in_id {
+            border-style: none;
+        }
+
+        &[type=submit] {
+            background-color: lightgray;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 2px;
+            border-style: none !important;
+        }
+    }
 }
 
 /* Page Header Links */
 p.rightaligntext {
-	display: inline-block;
-	height: 100%;
+    display: inline-block;
+    height: 100%;
 }
-span.pageheaderlinks {
-	display: inline;
-	float: right;
-	vertical-align: middle;
 
-	font-family: $rpifontsans;
-	user-select: none;	
-}
-span.pageheaderlinks>a.submenulinktext2 {
-	background-color: transparent;
-	padding: 5px;
-	user-select: text;
-	color: white !important;
-	vertical-align: middle;
-}
-span.pageheaderlinks>a.submenulinktext2:visited {
-	color: unset !important;
-}
-span.pageheaderlinks>a.submenulinktext2:hover {
-	color: unset !important;
+span.pageheaderlinks {
+    display: inline;
+    float: right;
+    vertical-align: middle;
+
+    font-family: var(--rpifontsans);
+    user-select: none;
+
+    &>a.submenulinktext2 {
+        background-color: transparent;
+        padding: 5px;
+        user-select: text;
+        color: white !important;
+        vertical-align: middle;
+
+        &:visited,
+        &:hover {
+            color: unset !important;
+        }
+    }
 }
