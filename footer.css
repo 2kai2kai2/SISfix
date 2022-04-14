@@ -1,8 +1,3 @@
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
-  font-weight: 200; }
-
 /*
 This file contains all the CSS for the footer,
 starting at `body>div.footerbeforediv` to the end.
@@ -11,16 +6,19 @@ can also include footer links specific to the page.
 */
 /* ======================================================= */
 div.footerbeforediv ~ div {
-  background-color: #777676; }
-  div.footerbeforediv ~ div,
-  div.footerbeforediv ~ div * {
-    margin: 0; }
+  background-color: #777676;
+}
+div.footerbeforediv ~ div,
+div.footerbeforediv ~ div * {
+  margin: 0;
+}
 
 /* ======================================================= */
 /* footerlinksdiv */
 /* The links menu at the bottom (optional) */
 div.footerlinksdiv {
-  padding-top: 2em; }
+  padding-top: 2em;
+}
 
 span.pagefooterlinks > map > p:last-child {
   color: white;
@@ -28,16 +26,19 @@ span.pagefooterlinks > map > p:last-child {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: space-around; }
-  span.pagefooterlinks > map > p:last-child a {
-    visibility: visible;
-    padding-left: 1em;
-    padding-right: 1em;
-    font-size: small;
-    font-family: "Source Sans Pro", sans-serif;
-    color: white; }
-    span.pagefooterlinks > map > p:last-child a, span.pagefooterlinks > map > p:last-child a:hover, span.pagefooterlinks > map > p:last-child a:visited {
-      color: white; }
+  align-content: space-around;
+}
+span.pagefooterlinks > map > p:last-child a {
+  visibility: visible;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: small;
+  font-family: "Source Sans Pro", sans-serif;
+  color: white;
+}
+span.pagefooterlinks > map > p:last-child a, span.pagefooterlinks > map > p:last-child a:hover, span.pagefooterlinks > map > p:last-child a:visited {
+  color: white;
+}
 
 /* ======================================================= */
 /* Info about the company that made SIS back in 2002 */
@@ -48,7 +49,8 @@ body > div.pagefooterdiv {
   padding-top: 1em;
   float: none;
   right: 0;
-  left: 0; }
+  left: 0;
+}
 
 span.releasetext {
   /* Has the "RELEASE: X.X.X.X" thing */
@@ -57,15 +59,18 @@ span.releasetext {
   font-weight: 100;
   text-align: center;
   display: block;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+}
 
 body > div.banner_copyright {
   left: 0;
-  right: 0; }
-  body > div.banner_copyright > h5 {
-    color: white;
-    font-size: small;
-    font-weight: 100;
-    text-align: center;
-    margin: 0;
-    padding-bottom: 1em; }
+  right: 0;
+}
+body > div.banner_copyright > h5 {
+  color: white;
+  font-size: small;
+  font-weight: 100;
+  text-align: center;
+  margin: 0;
+  padding-bottom: 1em;
+}

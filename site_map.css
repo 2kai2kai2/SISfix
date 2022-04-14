@@ -1,28 +1,22 @@
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
-  font-weight: 200; }
-
 /* Show/Hide Details */
 div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] {
   text-align: center;
   border-bottom-color: black;
   border-bottom-width: 1px;
-  border-bottom-style: solid; }
-  div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"],
-  div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"] {
-    border: none;
-    border-radius: 1em;
-    background-color: transparent; }
-    div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"], div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"]:hover, div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"]:visited,
-    div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"],
-    div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"]:hover,
-    div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"]:visited {
-      color: #D6001C; }
-    div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"]:hover,
-    div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"]:hover {
-      border: none;
-      background-color: lightgray; }
+  border-bottom-style: solid;
+}
+div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"], div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"] {
+  border: none;
+  border-radius: 1em;
+  background-color: transparent;
+}
+div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"], div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"]:hover, div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"]:visited, div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"], div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"]:hover, div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"]:visited {
+  color: #D6001C;
+}
+div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Show Details"]:hover, div.pagebodydiv > form[action^="/rss/twbksite.P_DispSiteMap?menu_name_in=bmenu.P_MainMnu"] > input[value="Hide Details"]:hover {
+  border: none;
+  background-color: lightgray;
+}
 
 /* Links */
 td.pldefault > a.sitemaplevel1 {
@@ -32,6 +26,8 @@ td.pldefault > a.sitemaplevel1 {
   border-bottom-color: black;
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  visibility: visible; }
-  td.pldefault > a.sitemaplevel1, td.pldefault > a.sitemaplevel1:hover, td.pldefault > a.sitemaplevel1:visited {
-    color: black; }
+  visibility: visible;
+}
+td.pldefault > a.sitemaplevel1, td.pldefault > a.sitemaplevel1:hover, td.pldefault > a.sitemaplevel1:visited {
+  color: black;
+}

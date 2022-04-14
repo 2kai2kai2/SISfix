@@ -24,7 +24,7 @@ Note that this makes the text unselectable
 div.headerwrapperdiv {
     background: none;
 
-	/* Top banner with title, set to red with white logo. */
+    /* Top banner with title, set to red with white logo. */
     &>div.pageheaderdiv1 {
         background-image: url("https://rpi.edu/dept/cct/apps/web-branding/v1/header/meganav/img/RPIlogo_white.png");
         /*"https://sis.rpi.edu/gengifs/smllman.gif"*/
@@ -34,7 +34,7 @@ div.headerwrapperdiv {
         background-color: var(--rpired) !important;
         margin: 0;
 
-		/* "Rensselaer Student Information System" text */
+        /* "Rensselaer Student Information System" text */
         &>h1 {
             color: white;
             font-family: var(--sspfont) !important;
@@ -82,9 +82,11 @@ tr>td.taboff {
     color: #767676 !important;
     background: none !important;
     padding: 0 !important;
+    margin: 0 1px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 50px;
 
     &:hover {
         background-color: var(--rpired) !important;
@@ -92,16 +94,20 @@ tr>td.taboff {
     }
 
     &>a {
+        /* Inherit the parent's color, allowing for change on hover */
         color: unset !important;
-        /*Inherit the parent's color, allowing for change on hover*/
+
+        /* Font */
         font-family: var(--sspfont) !important;
-        font-weight: 200 !important;
-        padding-left: 8px;
-        padding-right: 8px;
-        margin-left: 1px;
-        margin-right: 1px;
+        font-weight: 400 !important;
+        font-size: 16px;
+
+        padding: 15px 12px;
+        margin: 0;
+
         text-transform: uppercase;
         text-align: center !important;
+        vertical-align: middle;
     }
 }
 
@@ -119,8 +125,8 @@ div.headerwrapperdiv>table {
         align-items: stretch;
     }
 
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     background-color: #B6B6B6;
 }
 
@@ -153,14 +159,15 @@ div.headerlinksdiv2>form {
 
 /* Page Header Links */
 p.rightaligntext {
-    display: inline-block;
+    display: block;
     height: 100%;
 }
 
 span.pageheaderlinks {
-    display: inline;
-    float: right;
-    vertical-align: middle;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 
     font-family: var(--rpifontsans);
     user-select: none;
@@ -170,7 +177,6 @@ span.pageheaderlinks {
         padding: 5px;
         user-select: text;
         color: white !important;
-        vertical-align: middle;
 
         &:visited,
         &:hover {

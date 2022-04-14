@@ -1,11 +1,7 @@
-@font-face {
-  font-family: "Source Sans Pro";
-  src: url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap");
-  font-weight: 200; }
-
 /* Link formatting */
 table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr > td:nth-child(2) > a, table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr > td:nth-child(2) > a:hover, table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr > td:nth-child(2) > a:visited {
-  color: #D6001C; }
+  color: #D6001C;
+}
 
 /* Add contact */
 /*
@@ -24,12 +20,15 @@ table.datadisplaytable[summary="This table shows emergency contacts."] > tbody >
   padding-right: 1em;
   /*background-image: url("page_assets/plus_icon.gif");*/
   /* "New Contact" text */
-  color: white; }
-  table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr:last-of-type > td:nth-child(2) > a:hover {
-    color: #D6001C;
-    background-color: white;
-    text-decoration-line: unset; }
-  table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr:last-of-type > td:nth-child(2) > a::before {
-    content: "+";
-    font-weight: 900;
-    padding: 1px; }
+  color: white;
+}
+table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr:last-of-type > td:nth-child(2) > a:hover {
+  color: #D6001C;
+  background-color: white;
+  text-decoration-line: unset;
+}
+table.datadisplaytable[summary="This table shows emergency contacts."] > tbody > tr:last-of-type > td:nth-child(2) > a::before {
+  content: "+";
+  font-weight: 900;
+  padding: 1px;
+}

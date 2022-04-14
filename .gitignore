@@ -1,3 +1,6 @@
 # Distribution files
 *.zip
 *.crx
+
+# Compilation
+*.css.map

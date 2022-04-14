@@ -7,7 +7,8 @@ img[src="/gengifs/hwgginfo.gif"] {
   padding-left: 2em;
   padding-top: 30px;
   overflow: clip;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 img[src="/wtlgifs/web_info_cascade.png"] {
   background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Infobox_info_icon.svg/1200px-Infobox_info_icon.svg.png);
@@ -18,4 +19,5 @@ img[src="/wtlgifs/web_info_cascade.png"] {
   padding-left: 1.2em;
   padding-top: 1.2em;
   overflow: clip;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}

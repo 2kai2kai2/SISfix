@@ -9,14 +9,30 @@
 	},
 	"content_scripts": [
 		{
-			"css": ["defines.css", "app.css", "header.css", "footer.css", "info.css", "weekly_schedule.css", "site_map.css", "emergency_contacts.css"],
-			"matches": ["https://sis.rpi.edu/*"]
+			"css": [
+				"defines.css",
+				"sspfont.css",
+				"app.css",
+				"header.css",
+				"footer.css",
+				"info.css",
+				"weekly_schedule.css",
+				"site_map.css",
+				"emergency_contacts.css"
+			],
+			"matches": [
+				"https://sis.rpi.edu/*"
+			]
 		}
 	],
 	"web_accessible_resources": [
 		{
-			"resources": ["page_assets/*"],
-			"matches": ["https://sis.rpi.edu/*"]
+			"resources": [
+				"page_assets/*"
+			],
+			"matches": [
+				"https://sis.rpi.edu/*"
+			]
 		}
 	],
 	"manifest_version": 3

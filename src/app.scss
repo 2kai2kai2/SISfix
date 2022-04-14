@@ -1,4 +1,4 @@
-@import "defines.scss";
+@import "defines/defines.scss";
 
 :root {
     font-family: $sspfont !important;
@@ -28,6 +28,20 @@ div.pagetitlediv {
     padding-top: 2em;
     background-image: url("https://rpi.edu/images/backgrounds/diamonds/diamonds-white.jpg");
     background-repeat: repeat;
+
+    td {
+        padding: 0;
+    }
+
+    h2 {
+        font-weight: 200;
+        font-family: $sspfont;
+        color: $rpidarkred;
+        font-size: 32px;
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+        margin-left: 1em;
+    }
 }
 
 /* Page Body */
