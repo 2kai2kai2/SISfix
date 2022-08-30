@@ -1,0 +1,102 @@
+@import "_defines.scss";
+
+// Week label
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] {
+    padding-top: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    tbody {
+        border-style: ridge;
+        border-bottom-width: 0;
+        border-color: rgb(119, 118, 118);
+    }
+
+    tr>td {
+        border-width: 0 !important;
+    }
+
+    // Week header
+    tr>td.pldefault[colspan="3"] {
+        position: absolute;
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    // Previous/Next cells
+    tr>td.pldefault[colspan="1"] {
+
+        a,
+        a:hover,
+        a:visited {
+            color: black;
+
+            border-radius: 5px;
+            padding: 5px;
+            background-color: $rpinavy;
+            color: white;
+            font-family: $sspfont;
+            font-weight: 300;
+        }
+    }
+}
+
+// Table content
+table[summary="This layout table is used to present the weekly course schedule."] {
+    align-self: center;
+    width: calc(100% - 2em);
+
+    tr {
+        border-color: lightgray;
+        border-bottom-width: 0.5px;
+
+        // Column headers
+        &:first-child {
+            height: 2em;
+        }
+
+        // Days header cells
+        &>th.ddheader {
+            text-align: center;
+            padding-top: 0.5ex;
+
+            background-color: lightgray;
+            color: black;
+            font-family: $sspfont;
+            font-weight: 700;
+        }
+
+        // Content
+        &>td {
+            border-left-style: solid;
+            border-left-color: lightgrey;
+            border-left-width: 0.5px;
+
+            // Class block
+            &.ddlabel {
+                background-color: $rpired;
+                border-radius: 0.5em;
+                padding: 0.5em 1em;
+
+
+                a {
+                    font-family: $sspfont;
+                    font-weight: 400;
+
+                    &,
+                    :visited,
+                    :hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+form[action="https://www.bkstr.com/webApp/discoverShop"] {
+    margin-top: 1em;
+    margin-left: 1em;
+}

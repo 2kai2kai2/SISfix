@@ -1,0 +1,76 @@
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] tbody {
+  border-style: ridge;
+  border-bottom-width: 0;
+  border-color: rgb(119, 118, 118);
+}
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] tr > td {
+  border-width: 0 !important;
+}
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] tr > td.pldefault[colspan="3"] {
+  position: absolute;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] tr > td.pldefault[colspan="1"] a,
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] tr > td.pldefault[colspan="1"] a:hover,
+table[summary="This layout table is used to present the goto previous and next week anchors along with the current week information."] tr > td.pldefault[colspan="1"] a:visited {
+  color: black;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #333366;
+  color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+
+table[summary="This layout table is used to present the weekly course schedule."] {
+  align-self: center;
+  width: calc(100% - 2em);
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr {
+  border-color: lightgray;
+  border-bottom-width: 0.5px;
+  min-height: 1.6666666667em;
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr:first-child {
+  height: 2em;
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr > th.ddheader {
+  text-align: center;
+  padding-top: 0.5ex;
+  background-color: lightgray;
+  color: black;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr > td {
+  border-left-style: solid;
+  border-left-color: lightgrey;
+  border-left-width: 0.5px;
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr > td.ddlabel {
+  background-color: #D6001C;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr > td.ddlabel a {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+table[summary="This layout table is used to present the weekly course schedule."] tr > td.ddlabel a,
+table[summary="This layout table is used to present the weekly course schedule."] tr > td.ddlabel a :visited,
+table[summary="This layout table is used to present the weekly course schedule."] tr > td.ddlabel a :hover {
+  color: white;
+}
+
+form[action="https://www.bkstr.com/webApp/discoverShop"] {
+  margin-top: 1em;
+  margin-left: 1em;
+}

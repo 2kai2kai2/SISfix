@@ -18,7 +18,8 @@
 				"info.css",
 				"weekly_schedule.css",
 				"site_map.css",
-				"emergency_contacts.css"
+				"emergency_contacts.css",
+				"schedule_grid.css"
 			],
 			"matches": [
 				"https://sis.rpi.edu/*"
