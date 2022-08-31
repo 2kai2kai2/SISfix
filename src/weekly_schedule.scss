@@ -1,6 +1,29 @@
+@import "_defines.scss";
+
+/* datadisplaytable - class name*/
+table.datadisplaytable[summary="This layout table is used to present the schedule course detail"] {
+    &>caption {
+        font-family: $sspfont;
+        background-color: $rpinavy;
+    }
+
+    &>tbody {
+        border-top: none;
+        border-bottom: none;
+    }
+}
+
 /* datadisplaytable -- Weekly Student Schedule: make the meeting times table connect to the main part of the class table*/
-table.datadisplaytable[summary="This table lists the scheduled meeting times and assigned instructors for this class.."]>caption {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    margin-top: 0;
+table.datadisplaytable[summary="This table lists the scheduled meeting times and assigned instructors for this class.."] {
+    &>caption {
+        font-weight: 400;
+
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        margin-top: 0;
+    }
+
+    &>tbody {
+        border-top: none;
+    }
 }

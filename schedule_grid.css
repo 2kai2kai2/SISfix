@@ -37,7 +37,6 @@ table[summary="This layout table is used to present the weekly course schedule."
 table[summary="This layout table is used to present the weekly course schedule."] tr {
   border-color: lightgray;
   border-bottom-width: 0.5px;
-  min-height: 1.6666666667em;
 }
 table[summary="This layout table is used to present the weekly course schedule."] tr:first-child {
   height: 2em;
