@@ -21,3 +21,19 @@ img[src="/wtlgifs/web_info_cascade.png"] {
     overflow: clip;
     box-sizing: border-box;
 }
+
+// Email icons
+img[src="/wtlgifs/web_email.gif"] {
+    margin-left: 5px;
+    vertical-align: middle;
+
+    background-image: url(chrome-extension://edifoemhedcmjjmndaoaipfjnebeipdd/page_assets/mail.gif);
+    background-size: 1em;
+    background-repeat: no-repeat;
+    width: 1em;
+    height: 1em;
+    padding-left: 1em;
+    padding-top: 1em;
+    overflow: clip;
+    box-sizing: border-box;
+}
